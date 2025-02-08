@@ -29,7 +29,6 @@ document.addEventListener("DOMContentLoaded", () => {
             roleElement.style.opacity = 1;
         }, 500);
     }
-
     // start typing type first role
     typeRole();
 })
