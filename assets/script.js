@@ -1,4 +1,6 @@
-// word transition effect
+
+
+// WORD TRANSITION EFFECT
 document.addEventListener("DOMContentLoaded", () => {
     const roles = ["Desenvolvedor Front-end", "UI Designer"];
     const roleElement = document.getElementById('role');
@@ -29,6 +31,34 @@ document.addEventListener("DOMContentLoaded", () => {
             roleElement.style.opacity = 1;
         }, 500);
     }
+
     // start typing type first role
     typeRole();
 })
+
+
+
+
+// PROJECT FILTER
+document.addEventListener("DOMContentLoaded", function () {
+    const filterButtons = document.querySelectorAll('.project-list li')
+    const projects = document.querySelectorAll(".project-box")
+
+    filterButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+            filterButtons.forEach((btn) => btn.classList.remove("active"))
+            button.classList.add("active");
+
+            const filter = button.getAttribute("data-filter")
+
+            projects.forEach((project) => {
+                if (filter === "All" || project.getAttribute("data-category") === filter) {
+                    project.style.display = "block";
+                }
+                else {
+                    project.style.display = "none"
+                }
+            })
+        });
+    });
+});
