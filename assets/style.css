@@ -7,10 +7,10 @@
 :root {
     --main-color: #820ed0;
     --secondary-color: #F700B1;
-    --white-color: #F6F6F0;
-    --black-color-bg: #222222;
+    --text-color: #F6F6F0;
+    --bg-color: #222222;
     --gray-color: #5f5e5e;
-    --dark-color-body: #2D2D33;
+    --body-bg-color: #2D2D33;
     --border-color: #303030;
     --gradient-start: #1a1a1a;
     --gradient-end: #0C0C0C;
@@ -20,6 +20,21 @@
 
     --main-font: "Poppins", serif;
     --secondary-font: "Open Sans", Helvetica, sans-serif;
+}
+
+/* light mode color */
+:root.light-mode {
+    --main-color: #820ed0;
+    --secondary-color: #F700B1;
+    --text-color: #222222;
+    --bg-color: #EBEBEB;
+    --gray-color: #5f5e5e;
+    --body-bg-color: #ebeaea;
+    --border-color: #dadada;
+    --gradient-start: #f5f5f5;
+    --gradient-end: #c9c7c7;
+    --bg-gradient-start: #b7b5b5;
+    --bg-gadient-end: #919090;
 }
 
 * {
@@ -39,7 +54,7 @@ ul {
 
 /* BODY */
 body {
-    color: var(--white-color);
+    color: var(--text-color);
     background-image: linear-gradient(120deg, var(--bg-gradient-start), var(--bg-gadient-end)) !important;
     background-attachment: fixed;
 }
@@ -62,7 +77,9 @@ body {
 .menu-profile {
     display: grid;
     grid-template-columns: 65px 1fr;
-    grid-gap: 10px
+    grid-gap: 10px;
+    position: sticky;
+    top: 50px;
 }
 .dark-light-btn {
     width: 65px;
@@ -73,7 +90,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--white-color);
+    color: var(--text-color);
     border: none;
     outline: none;
     cursor: pointer;
@@ -111,8 +128,8 @@ header ul li a {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--white-color);
-    background-color: var(--black-color-bg);
+    color: var(--text-color);
+    background-color: var(--bg-color);
     position: relative;
     transition: all ease 0.2s;
 }
@@ -124,7 +141,7 @@ header ul li a::after {
     transform: translateY(-50%);
     white-space: nowrap;
     background-color: var(--main-color);
-    color: var(--black-color-bg);
+    color: var(--bg-color);
     padding: 5px 10px;
     border-radius: 5px;
     font-size: 14px;
@@ -177,7 +194,7 @@ header nav ul li a:hover::after {
     height: 280px;
     display: flex;
     border-radius: 30px 0 30px 30px;
-    background-color: var(--white-color);
+    background-color: var(--text-color);
     overflow: hidden;
 }
 .user-profile-img img {
@@ -201,7 +218,7 @@ header nav ul li a:hover::after {
     font-weight: bold;
 }
 .user-profile-text h1 {
-    color: var(--white-color);
+    color: var(--text-color);
     font-size: 2rem;
     font-weight: 600;
     margin: 5px 0;
@@ -221,7 +238,7 @@ header nav ul li a:hover::after {
     justify-content: center;
     align-items: center;
     margin-top: 15px;
-    color: var(--white-color);
+    color: var(--text-color);
     transition: all ease 0.3s;
 }
 .profile-social-container a:hover,
@@ -239,7 +256,7 @@ header nav ul li a:hover::after {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--white-color);
+    color: var(--text-color);
     letter-spacing: 0.5px;
     font-weight: 500;
     transition: all ease 0.3s;
@@ -286,7 +303,7 @@ header nav ul li a:hover::after {
     padding-right: 5px;
 }
 #about-us h1 {
-    color: var(--white-color);
+    color: var(--text-color);
     font-size: 2.5rem;
     margin: 10px 0;
     font-weight: 500;
@@ -295,7 +312,7 @@ header nav ul li a:hover::after {
 }
 #about-us h1 span {
     background-color: var(--main-color);
-    color: var(--black-color-bg);
+    color: var(--bg-color);
     padding: 0 20px;
     font-size: 2.3rem;
     border-radius: 20px;
@@ -337,7 +354,7 @@ header nav ul li a:hover::after {
     align-items: flex-start;
 }
 .section-heading span {
-    color: var(--white-color);
+    color: var(--text-color);
     border: 1px solid var(--border-color);
     padding: 5px 20px;
     border-radius: 30px;
@@ -346,7 +363,7 @@ header nav ul li a:hover::after {
     letter-spacing: 1px;
 }
 .section-heading h3 {
-    color: var(--white-color);
+    color: var(--text-color);
     font-size: 2rem;
     font-weight: 500;
     margin-top: 6px;
@@ -376,7 +393,7 @@ header nav ul li a:hover::after {
     font-size: 2rem;
 }
 .skill-box-content span {
-    color: var(--white-color);
+    color: var(--text-color);
     font-weight: 500;
 }
 .skill-box-percentage {
@@ -399,7 +416,7 @@ header nav ul li a:hover::after {
     margin-top: 15px;
 }
 .skill-box-bar span {
-    background-color: var(--white-color);
+    background-color: var(--text-color);
     height: 100%;
     position: absolute;
     left: 0;
@@ -407,7 +424,7 @@ header nav ul li a:hover::after {
     border-radius: 30px;
 }
 .service-message {
-    color: var(--white-color);
+    color: var(--text-color);
     text-align: center;
     margin: 35px 0 0 0;
     font-size: 0.8rem;
@@ -450,17 +467,17 @@ header nav ul li a:hover::after {
     padding-top: 15px
 }
 .service-box-heading-text strong {
-    color: var(--white-color);
+    color: var(--text-color);
     font-size: 1rem;
     font-weight: 600;
 }
 .service-box-details {
     font-size: 0.9rem;
-    color: var(--white-color);
+    color: var(--text-color);
     margin: 20px 0;
 }
 .service-box a {
-    color: var(--white-color);
+    color: var(--text-color);
     text-transform: uppercase;
     text-decoration: underline;
     font-size: 0.9rem;
@@ -493,7 +510,7 @@ header nav ul li a:hover::after {
     font-size: 0.8rem;
     letter-spacing: 1px;
     font-weight: 500;
-    color: var(--black-color-bg);
+    color: var(--bg-color);
 }
 .plan-box .price {
     font-size: 2.4rem;
@@ -502,8 +519,8 @@ header nav ul li a:hover::after {
     margin-top: 10px;
 }
 .plan-box a {
-    color: var(--white-color);
-    border: 1px solid var(--white-color);
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
     padding: 10px 20px;
     border-radius: 30px;
     font-size: 0.9rem;
@@ -513,8 +530,8 @@ header nav ul li a:hover::after {
     letter-spacing: 1px;
 }
 .plan-box a:hover {
-    color: var(--black-color-bg);
-    background-color: var(--white-color);
+    color: var(--bg-color);
+    background-color: var(--text-color);
 }
 .pricing-box-feature {
     display: flex;
@@ -534,7 +551,7 @@ header nav ul li a:hover::after {
 .pricing-box-feature li span {
     margin: -5px;
     display: flex;
-    color: var(--white-color);
+    color: var(--text-color);
     font-size: 0.9rem;
 }
 
@@ -548,8 +565,8 @@ header nav ul li a:hover::after {
     margin: 50px 0 0 0;
 }
 .project-list li {
-    color: var(--white-color);
-    background-color: var(--black-color-bg);
+    color: var(--text-color);
+    background-color: var(--bg-color);
     border: 1px solid var(--border-color);
     padding: 5px 20px;
     border-radius: 20px;
@@ -562,7 +579,7 @@ header nav ul li a:hover::after {
 .project-list li.active {
     border: none;
     background-color: var(--main-color);
-    color: var(--black-color-bg);
+    color: var(--bg-color);
 }
 
 .project-container {
@@ -604,15 +621,15 @@ header nav ul li a:hover::after {
     align-items: flex-start;
 }
 .project-box-text strong {
-    color: var(--white-color);
+    color: var(--text-color);
     font-size: 0.9rem;
     margin: 5px 0;
     font-weight: 500;
 }
 .project-box-text span {
-    color: var(--white-color);
+    color: var(--text-color);
     font-size: 0.7rem;
-    background-color: var(--black-color-bg);
+    background-color: var(--bg-color);
     border-radius: 20px;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -621,17 +638,17 @@ header nav ul li a:hover::after {
     transition: all ease 0.3s;
 }
 .project-box-btn {
-    color: var(--white-color);
+    color: var(--text-color);
     width: 50px;
     height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--black-color-bg);
+    background-color: var(--bg-color);
     border-radius: 50%;
 }
 .project-box:hover .project-box-text span {
-    color: var(--black-color-bg);
+    color: var(--bg-color);
     background-color: var(--main-color);
     border: none;
 }
@@ -647,8 +664,8 @@ header nav ul li a:hover::after {
     margin-top: 50px;
 }
 .edu-work-label {
-    color: var(--white-color);
-    background-color: var(--black-color-bg);
+    color: var(--text-color);
+    background-color: var(--bg-color);
     padding: 5px 15px;
     border-radius: 20px;
     font-size: 0.8rem;
@@ -673,7 +690,7 @@ header nav ul li a:hover::after {
     display: flex;
     flex-direction: column;
     backdrop-filter: blur(15px);
-    background-color: var(--black-color-bg);
+    background-color: var(--bg-color);
     position: relative;
     border: 1px solid var(--border-color);
 }
@@ -695,7 +712,7 @@ header nav ul li a:hover::after {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: var(--white-color);
+    background-color: var(--text-color);
     opacity: 0.6;
 }
 .edu-work-box .edu-work-year {
@@ -705,11 +722,11 @@ header nav ul li a:hover::after {
 }
 .edu-work-location {
     font-size: 0.8rem;
-    color: var(--white-color);
+    color: var(--text-color);
     opacity: 0.6;
 }
 .edu-work-box p {
-    color: var(--white-color);
+    color: var(--text-color);
     font-size: 0.8rem;
     margin-top: 10px;
 }
@@ -742,7 +759,7 @@ header nav ul li a:hover::after {
     font-size: 0.8rem;
 }
 .testimonials-box p {
-    color: var(--white-color);
+    color: var(--text-color);
     font-size: 0.9rem;
     margin: 15px 0;
 }
@@ -774,7 +791,7 @@ header nav ul li a:hover::after {
     font-weight: 500;
 }
 .client-profile-text span {
-    color: var(--white-color);
+    color: var(--text-color);
     opacity: 0.6;
     font-size: 0.8rem;
 }
@@ -783,7 +800,7 @@ header nav ul li a:hover::after {
     margin-top: 15px;
 }
 .swiper-pagination-bullet {
-    background-color: var(--white-color) !important;
+    background-color: var(--text-color) !important;
 }
 .swiper-pagination-bullet-active {
     background-color: var(--main-color) !important;
@@ -793,4 +810,44 @@ header nav ul li a:hover::after {
 }
 .swiper-slide-active {
     opacity: 1;
+}
+
+
+/* CONTACT */
+#contact {
+    border-radius: 0 0 30px 30px;
+}
+.contact-box-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 40px;
+    gap: 20px;
+}
+.contact-box {
+    border-radius: 10px;
+    padding: 25px;
+    border: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.contact-box-icon {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+.contact-box-icon i {
+    color: var(--main-color);
+    font-size: 1.6rem;
+}
+.contact-box-icon strong {
+    color: var(--text-color);
+    opacity: 0.8;
+    font-weight: 500;
+    font-size: 0.8rem;
+}
+.contact-box span {
+    color: var(--text-color);
+    font-size: 0.8rem;
 }
