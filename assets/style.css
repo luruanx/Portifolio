@@ -31,7 +31,7 @@
     --gray-color: #5f5e5e;
     --body-bg-color: #ebeaea;
     --border-color: #dadada;
-    --gradient-start: #f5f5f5;
+    --gradient-start: #dad8d8;
     --gradient-end: #c9c7c7;
     --bg-gradient-start: #b7b5b5;
     --bg-gadient-end: #919090;
@@ -42,6 +42,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: var(--main-font);
+    scroll-behavior: smooth;
 }
 
 /* UTILITIES */
@@ -96,7 +97,8 @@ body {
     cursor: pointer;
 }
 .dark-light-btn:hover,
-header ul li a:hover{
+header ul li a:hover,
+header ul li a.active {
     color: var(--main-color);
 }
 

@@ -118,4 +118,34 @@ var swiper = new Swiper(".mySwiper", {
         //save mode in local storage 
         localStorage.setItem("mode", isLightMode ? "light" : "dark");
     })
+
+    // nav auto active
+    const section = document.querySelectorAll("section")
+    const navLinks = document.querySelectorAll("ul li a")
+
+    function setActiveLink() {
+        let currentSection = "";
+
+        section.forEach((section) => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+
+            if (window.scrollY >= sectionTop - sectionHeight / 3) {
+                currentSection = section.getAttribute("id");
+            }
+        })
+
+        navLinks.forEach((link) => {
+            link.classList.remove("active");
+            if (link.getAttribute("href") === `#${currentSection}`) {
+                link.classList.add("active")
+            }
+        })
+    }
+
+    window.addEventListener("scroll", setActiveLink)
   });
+
+
+  // aos animation
+  AOS.init();
