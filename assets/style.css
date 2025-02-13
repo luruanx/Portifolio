@@ -9,7 +9,7 @@
     --secondary-color: #F700B1;
     --text-color: #F6F6F0;
     --bg-color: #222222;
-    --gray-color: #5f5e5e;
+    --gray-color: #8c8a8a;
     --body-bg-color: #2D2D33;
     --border-color: #303030;
     --gradient-start: #1a1a1a;
@@ -28,7 +28,7 @@
     --secondary-color: #F700B1;
     --text-color: #222222;
     --bg-color: #EBEBEB;
-    --gray-color: #5f5e5e;
+    --gray-color: #434242;
     --body-bg-color: #ebeaea;
     --border-color: #dadada;
     --gradient-start: #dad8d8;
@@ -852,4 +852,111 @@ header nav ul li a:hover::after {
 .contact-box span {
     color: var(--text-color);
     font-size: 0.8rem;
+}
+
+
+
+
+/* RESPONSIVE */
+@media (max-width: 1100px) {
+    .main-container {
+        grid-template-columns: 1fr;
+    }
+    .menu-profile {
+        grid-template-columns: 1fr;
+        position: static;
+    }
+    nav {
+        display: grid;
+        grid-template-columns: 60px 1fr;
+        gap: 10px;
+        align-items: baseline;
+        max-width: 600px;
+        margin: auto;
+    }
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding: 5px;
+        box-shadow: 2px 2px 30px rgba(235, 235, 235, 0.12);
+    }
+    header nav ul li a::after,
+    header nav ul li a::before {
+        display: none;
+    }
+    .dark-light-btn {
+        width: 60px;
+        height: 60px;
+        box-shadow: 2px 2px 30px var(--border-color);
+    }
+    .user-profile-img {
+        min-height: 500px;
+        margin: auto;
+    }
+    .user-profile-img img {
+        width: 500px;
+    }
+}
+
+@media (max-width: 790px) {
+    .project-container-about {
+        grid-template-columns: 1fr 1fr;
+    }
+    .skill-box-container, 
+    .service-container,
+    .plan-container,
+    .project-container,
+    .edu-work-container,
+    .contact-box-container {
+        grid-template-columns: 1fr;
+    }
+    .edu-work-label i {
+        margin-bottom: 30px;
+    }
+    .edu-work-box-container {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width:520px) {
+    .main-container {
+        margin: 20px auto;
+    }
+    .project-container-about {
+        grid-template-columns: 1fr;
+    }
+    .user-profile-img {
+        min-height: auto;
+    }
+    .user-profile-container {
+        padding: 30px;
+    }
+    .section-container,
+    #about-us {
+        padding: 60px 30px;
+    }
+    #about-us h3 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    #about-us h3 span {
+        min-height: 34px;
+    }
+    #about-us h1,
+    #about-us h1 span {
+        font-size: 2.6rem;
+    }
+    .project-container-about {
+        display: flex;
+    }
+    .section-heading span {
+        font-size: 1.5rem;
+    }
+    .project-box-img {
+        height: 250px;
+    }
 }
