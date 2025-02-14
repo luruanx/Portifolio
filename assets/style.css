@@ -30,7 +30,7 @@
     --bg-color: #EBEBEB;
     --gray-color: #434242;
     --body-bg-color: #ebeaea;
-    --border-color: #dadada;
+    --border-color: #ffffff;
     --gradient-start: #dad8d8;
     --gradient-end: #c9c7c7;
     --bg-gradient-start: #b7b5b5;
@@ -677,6 +677,9 @@ header nav ul li a:hover::after {
     border: 1px solid var(--border-color);
     margin-left: 20px;
 }
+.edu-work-label i {
+    margin-bottom: 30px;
+}
 .edu-work-box-container {
     display: flex;
     flex-direction: column;
@@ -911,9 +914,6 @@ header nav ul li a:hover::after {
     .edu-work-container,
     .contact-box-container {
         grid-template-columns: 1fr;
-    }
-    .edu-work-label i {
-        margin-bottom: 30px;
     }
     .edu-work-box-container {
         margin-bottom: 30px;
