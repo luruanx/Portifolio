@@ -71,38 +71,38 @@ var swiper = new Swiper(".mySwiper", {
     slidesPerView: 1,
     spaceBetween: 10,
     pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
+        el: ".swiper-pagination",
+        clickable: true,
     },
     autoplay: {
         delay: 2500,
         disableOnInteraction: false,
     },
     breakpoints: {
-      640: {
-        slidesPerView: 1,
-        spaceBetween: 20,
-      },
-      768: {
-        slidesPerView: 1.5,
-        spaceBetween: 20,
-      },
-      1024: {
-        slidesPerView: 1.5,
-        spaceBetween: 20,
-      },
+        640: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+        },
+        768: {
+            slidesPerView: 1.5,
+            spaceBetween: 20,
+        },
+        1024: {
+            slidesPerView: 1.5,
+            spaceBetween: 20,
+        },
     },
-  });
+});
 
 
 
-  // DAR LIGHT MODE
-  document.addEventListener("DOMContentLoaded", function() {
+// DARK LIGHT MODE
+document.addEventListener("DOMContentLoaded", function () {
     const toggleButton = document.querySelector(".dark-light-btn")
     const htmlElement = document.documentElement;
 
     const currentMode = localStorage.getItem("mode");
-    
+
     if (currentMode === "light") {
         htmlElement.classList.add("light-mode");
         toggleButton.innerHTML = "<i class='fa-regular fa-moon' ></i>"
@@ -144,8 +144,8 @@ var swiper = new Swiper(".mySwiper", {
     }
 
     window.addEventListener("scroll", setActiveLink)
-  });
+});
 
 
-  // aos animation
-  AOS.init();
+// aos animation
+AOS.init();
