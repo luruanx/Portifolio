@@ -429,7 +429,7 @@ header nav ul li a:hover::after {
     color: var(--text-color);
     text-align: center;
     margin: 35px 0 0 0;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
 }
 .service-message a {
     color: var(--main-color);
