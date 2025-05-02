@@ -1,8 +1,6 @@
-
-
 // WORD TRANSITION EFFECT
 document.addEventListener("DOMContentLoaded", () => {
-    const roles = ["Desenvolvedor Front-end", "UI Designer"];
+    const roles = ["Desenvolvedor Front-end", "Analista QA Tester", "Analista de Sistemas"];
     const roleElement = document.getElementById('role');
     let roleIndex = 0;
     let letterIndex = 0;
