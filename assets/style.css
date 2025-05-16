@@ -743,9 +743,13 @@ header nav ul li a:hover::after {
     opacity: 0.6;
 }
 .edu-work-box p {
-    color: var(--text-color);
+    color: #969693;
     font-size: 0.8rem;
     margin-top: 10px;
+}
+.edu-work-box p > span{
+    color: var(--text-color);
+    font-weight: 600;
 }
 
 /* TESTIMONIALS */
