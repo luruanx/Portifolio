@@ -920,7 +920,14 @@ header nav ul li a:hover::after {
 }
 
 @media (max-width: 790px) {
+    .menu-profile {
+        margin-right: 19px;
+    }
+    .all-content {
+        padding-right: 19px;
+    }
     .project-container-about {
+        gap: 30px;
         grid-template-columns: 1fr 1fr;
     }
     .skill-box-container, 
