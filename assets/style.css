@@ -380,9 +380,9 @@ header nav ul li a:hover::after {
 
 .skill-box-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px;
-    margin: 15px 0 40px;
+    margin: 15px 0;
     width: 100%;
 }
 .skill-box {
@@ -403,18 +403,7 @@ header nav ul li a:hover::after {
 .skill-box-content span {
     color: var(--main-color);
     font-weight: 500;
-    font-size: .7rem;
-}
-.skill-box-percentage {
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    border-radius: 10px;
-    border: 1px solid var(--border-color);
-    color: var(--main-color);
-    font-size: 0.8rem;
-    font-weight: 500;
-    padding: 3px 10px;
+    font-size: .5rem;
 }
 .skill-box-bar {
     position: relative;
@@ -423,7 +412,7 @@ header nav ul li a:hover::after {
     background-color: var(--border-color);
     border-radius: 10px;
     overflow: hidden;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 .skill-box-bar span {
     background-color: var(--main-color);
